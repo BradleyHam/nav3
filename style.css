@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+:root{
+    --main-nav: #3D464F;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+body{
+    font-family: "Roboto";
+    background-color: rgb(237, 239, 240);
+}
+.container{
+    min-height: 100vh;
+    background-color: aliceblue;
+}
+.navBackground{
+    height: 70px;
+    background-color: var(--main-nav);
+   
+}
+.navbar{
+    height: 70px;
+    background-color: var(--main-nav);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: white;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+
+.nav__list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+.nav__list li{
+    padding: 1em;
+}
+.hamburger-logo-container{
+    margin-right: auto;
+}
+
+.dropdown{
+    display: none;
+}
+.logo{
+    font-weight: bold;
+}
+
+@media(max-width: 800px){
+    .nav__list{
+       display:none; 
+    }
+   .logo{
+       margin-right: auto;
+   }
+    .hamburger{
+        height: 50px; 
+        width: 50px;
+        background-color:rgba(255,255,255,.15);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        
+        
+    }
+    .hamburger__line{
+        height: 2px; 
+        width: 70%;
+        background-color: white;
+        margin: .24em;
+    }
+
+.hamburger-logo-container{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items:center;
+}
+
+
+           /*   ------    DROPDOWN   -------        */
+
+  .dropdown.vis{
+      min-height: 20vh;
+      background-color: var(--main-nav);
+      color:white;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      list-style-type: none;
+      padding-bottom:2em;
+  }
+  .dropdown.vis .dropdown__item{
+      padding:1em;
+      width: 50%;
+     
+      text-align: center;
+     
+  }
+  .dropdown.vis .dropdown__item:not(:last-child){
+    border-bottom: 1px solid rgba(255,255,255,.1);
+  }
+}
